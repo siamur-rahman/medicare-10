@@ -14,22 +14,22 @@ import Doctor from '../Doctor/Doctor';
 const experts = [
    {
       img: doc1,
-      name: 'Andrew Smith',
+      name: 'Dr.Amena',
       expertize: 'Special Cardiologists'
    },
    {
       img: doc2,
-      name: 'John Anderson',
+      name: 'Dr.ROHIMA',
       expertize: 'Neurologists'
    },
    {
       img: doc3,
-      name: 'Zakaria Smith',
+      name: 'Dr.Zakaria Smith',
       expertize: 'Dermatology'
    },
    {
       img: doc4,
-      name: 'Sakib Anderson',
+      name: 'Dr. Sakib Anderson',
       expertize: 'Orthopaedics'
    },
 ]

@@ -11,8 +11,10 @@ import Error from "./Components/pages/Error/Error";
 
 import Home from "./Components/pages/Home/Home";
 import Login from "./Components/pages/Login/Login";
+import PrivateRoute from "./Components/pages/PrivateRoute/PrivateRoute";
+import Register from "./Components/pages/ReGister/Register";
 import ServicesDetails from "./Components/pages/ServiceDetails/ServicesDetails";
-
+// import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -31,12 +33,19 @@ function App() {
         <Route exact path="/about">
           <About></About>
         </Route>
-        <Route exact path="/home/:id">
+        <PrivateRoute path="/home/:id">
           <ServicesDetails></ServicesDetails>
-        </Route>
-        <Route exact path="/doctor">
+        </PrivateRoute>
+
+        <PrivateRoute path="/doctor">
           <Doctors></Doctors>
+        </PrivateRoute>
+
+
+        <Route exact path="/register">
+          <Register></Register>
         </Route>
+
         <Route exact path="/login">
           <Login></Login>
         </Route>
