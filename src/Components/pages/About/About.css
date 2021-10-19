@@ -1,0 +1,10 @@
+.about{
+   background-color: rgba(0, 0, 0, 0.829);
+   margin-top: 0px;
+   color: rgba(255, 255, 255, 0.486);
+  
+}
+.about p{
+   padding-right: 20px;
+   padding-left: 20px;
+}

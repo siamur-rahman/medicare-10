@@ -1,0 +1,68 @@
+[
+   {
+      "id": "1",
+      "name": "CARDIAC CLINIC",
+      "img": "images/img-1.jpg",
+      "description": "Donec quam felis,4 ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet."
+   },
+   {
+      "id": "2",
+      "name": "EYE CARE & SURGERY",
+      "img": "images/img-2.jpg",
+      "description": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa3 quis enim. Donec pede justo, fringilla vel, aliquet."
+   },
+   {
+      "id": "3",
+      "name": "DIABETES TREATMENT",
+      "img": "images/img-3.jpg",
+      "description": "Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet."
+   },
+   {
+      "id": "4",
+      "name": "Surgery",
+      "img": "images/img-4.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est3 laborum."
+   },
+   {
+      "id": "5",
+      "name": "Neurology",
+      "img": "images/img-5.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.25"
+   },
+   {
+      "id": "6",
+      "name": "Dermatology",
+      "img": "images/img-6.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+   },
+   {
+      "id": "7",
+      "name": "Haematology",
+      "img": "images/img-7.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.12"
+   },
+   {
+      "id": "8",
+      "name": "Orthopaedics",
+      "img": "images/img-8.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum33."
+   },
+   {
+      "id": "9",
+      "name": "Dental ",
+      "img": "images/img-9.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum3."
+   },
+   {
+      "id": "10",
+      "name": "Urology",
+      "img": "images/img-10.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum455."
+   },
+   {
+      "id": "11",
+      "name": "Dietics",
+      "img": "images/img-6.jpg",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum5."
+   }
+]
