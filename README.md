@@ -1,6 +1,6 @@
 # Come hare and get survices from MEDI CARE
 
-This project was react bootstrapped with [MEDI CARE](https://medi-care-bac8f.web.app/).
+This project was created with react bootstrapped . Visit [MEDI CARE](https://medi-care-bac8f.web.app/).
 
 * This website is about a online helth care or treatment .
 * Here you can get emergency ambulence with a call.
