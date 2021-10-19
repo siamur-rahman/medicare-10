@@ -1,33 +1,188 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
-import './Register.css';
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import useFirebase from '../../hooks/useFirebase';
+
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+
+import { useState } from "react";
+
+
+
+import inializeAuthentication from './../Login/Firebase/firebase.init';
+
+
+
+
+inializeAuthentication();
 
 const Register = () => {
+   const { signInUsingGoogle } = useFirebase();
+   const [name, setName] = useState('');
+
+   const [email, setEmail] = useState('');
+   const [Password, setPassword] = useState('');
+   const [error, setError] = useState('');
+   const [isLogin, setIsLogin] = useState(false);
+
+   const auth = getAuth();
+
+   //cheakbox...TOGGLE LOGIN
+   const toggleLogin = e => {
+      setIsLogin(e.target.checked);
+      console.log(e.target.checked);
+   }
+   //handleNameChange
+   const handleNameChange = e => {
+      setName(e.target.value);
+
+   }
+
+   //Handle email Change
+   const handleEmailChange = e => {
+      // console.log(e.target.value);
+      setEmail(e.target.value);
+   }
+
+   //Handle password Change
+   const handlePasswordChange = e => {
+      // console.log(e.target.value);
+      setPassword(e.target.value);
+
+   }
+
+   //HANDLEREGISTRATION
+   const handleRegistration = (e) => {
+      e.preventDefault();
+      console.log(email, Password);
+      if (Password.length < 6) {
+         setError('password should be at least 6 characters long');
+         return;
+      }
+      if (!/(?=.*[A-Z].*[A-Z])/.test(Password)) {
+         setError('password must contain two upper case');
+         return;
+      }
+
+      isLogin ? processLogin(email, Password) : registerNewUser(email, Password)
+   }
+
+   //LOG IN USER
+   const processLogin = (email, Password) => {
+      signInWithEmailAndPassword(auth, email, Password)
+         .then(result => {
+            const user = result.user;
+            console.log(user);
+            setError('');
+         })
+         .catch(error => {
+            setError(error.message);
+
+         })
+   }
+
+   //REGISTER USER
+   const registerNewUser = (email, Password) => {
+      createUserWithEmailAndPassword(auth, email, Password)
+         .then(result => {
+            const { displayName, email, photoURL } = result.user;
+            const logInUser = {
+               name: displayName,
+               email: email,
+               photo: photoURL
+            };
+            console.log(logInUser);
+            // setUser(logInUser);
+            setError('');
+            varifyEmail();
+            setUserName();
+         })
+         .catch(error => {
+            setError(error.message);
+         })
+   }
+   //set userNAME
+   const setUserName = () => {
+      updateProfile(auth.currentUser, { displayName: name })
+         .then(result => { })
+   }
+
+   //EMAIL VARIFICATION
+   const varifyEmail = () => {
+      sendEmailVerification(auth.currentUser)
+         .then(result => {
+            console.log(result);
+         })
+   }
+
+   //HANDLE RESET PASSWORD
+   const handleResetPassword = () => {
+      sendPasswordResetEmail(auth, email)
+         .then(result => { })
+   }
+
+
    return (
-      <div id="register" >
-         <Header></Header>
-         <div className="register d-flex justify-content-center  ">
+      <div className="mx-5">
 
-            <div className="m-5 p-5 reg-input">
-               <h2>Please Register</h2>
-               <form >
-                  <input type="email" />
-                  <br /><br />
-                  <input type="password" />
-                  <br /><br />
-                  <div className="d-flex justify-content-center align-items-center">
-                     <input type="submit" value="Submit" />
-                     <Link to="/login"> Already Registered?</Link>
-                  </div>
-               </form>
+         <br /><br />
 
+         <form onSubmit={handleRegistration}>
+
+
+            <h3 className="text-primary">Please {isLogin ? 'Login' : 'Register'}</h3>
+
+            {!isLogin && <div className="row mb-3">
+               <label htmlFor="inputName" className="col-sm-2 col-form-label">Name</label>
+               <div className="col-sm-10">
+                  <input onBlur={handleNameChange} type="text" className="form-control" id="inputName" placeholder="your name" required />
+               </div>
             </div>
-         </div>
-         <Footer></Footer>
+            }
+
+
+            <div className="row mb-3">
+               <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
+               <div className="col-sm-10">
+                  <input onBlur={handleEmailChange} type="email" className="form-control" id="inputEmail3" required />
+               </div>
+            </div>
+            <div className="row mb-3">
+               <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
+               <div className="col-sm-10">
+                  <input onBlur={handlePasswordChange} type="password" className="form-control" id="inputPassword3" required />
+               </div>
+            </div>
+
+            <div className="row mb-3">
+               <div className="col-sm-10 offset-sm-2">
+                  <div className="form-check">
+
+
+                     <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck1" />
+                     <div className="d-flex ">
+                        <label className="form-check-label  mx-4" htmlFor="gridCheck1">
+                           Already Registered?
+                        </label>
+                        <button type="submit" className="btn btn-primary">{isLogin ? 'Login' : 'Register'}</button>
+                     </div><br /><br />
+                     <div className="d-flex justify-content-center ">
+
+                        <button onClick={handleResetPassword} type="button" className="btn btn-secondary btn-sm">Reset Password</button>
+                        <button onClick={signInUsingGoogle} className="btn btn-warning mb-2 mx-5"> Sign In With Google </button>
+                     </div>
+
+                  </div>
+
+               </div>
+            </div>
+
+
+         </form>
+
       </div>
    );
-};
+}
+
 
 export default Register;
