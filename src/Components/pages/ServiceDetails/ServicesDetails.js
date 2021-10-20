@@ -40,20 +40,18 @@ const ServicesDetails = () => {
 
 
 
-            <Container className="my-5 d-flex justify-content-center">
-               <Row>
-                  <Col md={4}>
-                  </Col>
+            <Container className="my-5 d-flex  justify-content-center">
+               <Row >
                   <Col md={6}>
                      <Card style={{ width: '18rem' }}>
 
                         <div className="d-flex justofy-content-center">
-                           <Card className="d-flex justofy-content-center bg-danger ">
+                           <Card className="d-flex justofy-content-center  ">
                               <Card.Img variant="top" src={singleService?.img} />
                            </Card>
                         </div>
 
-                        <Card.Body className="">
+                        <Card.Body className="cardss">
                            <Card.Title>{singleService?.name}</Card.Title>
                            <Card.Text>{singleService?.description}
                            </Card.Text>

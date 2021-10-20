@@ -11,17 +11,22 @@
    border-radius: 25px;
 }
 .details-btn{
-   background-color: rgba(255, 0, 0, 0.631);
+   background-color: rgba(190, 86, 21, 0.886);
    border: none;
    margin: 15px;
   
 }
 .details-btn:hover{
-   background-color: green;
+   background-color: rgba(0, 128, 0, 0.605);
 }
 .details-btn u {
    color: blue;
 }
-.card:hover{
-   background-color: rgb(216, 165, 98);
+.cardss:hover{
+   background-color: rgba(216, 191, 216, 0.763);
+}
+.cardss{
+   background-color: rgba(216, 191, 216, 0.441);
+   border-radius: 5px;
+
 }

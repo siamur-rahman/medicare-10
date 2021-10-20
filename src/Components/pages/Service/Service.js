@@ -4,28 +4,46 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Service.css';
 
+import { Container, Card, Row, Col } from 'react-bootstrap';
 
 const Service = ({ service }) => {
 
     const { id, name, description, img } = service;
 
     return (
-        <div className="service p-4 ">
-            <div> <img src={img} alt="" />
-                <h3>{name}</h3>
 
-                <p className="px-3">{description}</p>
-            </div>
-            <div className="d-flex justify-content-center">
-                <Link to={`/home/${id}`}>
-                    <button className="btn btn-warning">
+
+        <Container className=" p-5 service-cards">
+            <Row>
+                <Col md={5}>
+                    <div className="">
+                        <Card className="">
+                            <Card.Img variant="top" src={img} />
+                        </Card>
+                    </div>
+                </Col>
+                <Col md={7}>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body className="cart-dody">
+                            <Card.Title>{name}</Card.Title>
+                            <Card.Text>{description}
+                            </Card.Text>
+
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+            <Link to={`/home/${id}`}>
+                <div className=" w-100 align-items-center ">
+                    <button className="  btn-warn mt-3">
                         <FontAwesomeIcon icon={faPhone} /> Contact with {name.toLowerCase()} units</button>
-                </Link>
-            </div>
-            {
+                </div>
+            </Link>
+        </Container>
 
-            }
-        </div>
+
+
+
     );
 };
 

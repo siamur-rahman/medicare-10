@@ -7,11 +7,14 @@
    border-radius: 35px;
 }
 .doctor-card:hover{
-   background-color: rgba(12, 90, 12, 0.419);
+   background-color: rgba(12, 90, 12, 0.194);
    
 }
 
 .button{
-   background-color: rgb(150, 71, 15);
+   background-color: rgba(150, 71, 15, 0.605);
    color: white;
+   border: none;
+   border-radius: 15px;
+   padding: 5px;
 }
