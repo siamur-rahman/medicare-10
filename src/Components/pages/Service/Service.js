@@ -19,8 +19,8 @@ const Service = ({ service }) => {
                     </div>
                 </Col>
                 <Col md={7}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Body >
+                    <Card style={{ width: '18rem' }} >
+                        <Card.Body className="cart-dody">
                             <Card.Title>{name}</Card.Title>
                             <Card.Text>{description}
                             </Card.Text>
