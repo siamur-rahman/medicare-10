@@ -12,7 +12,7 @@ const Header = () => {
    const { user, logOut } = useFirebase();
 
    return (
-      <div className="header-container">
+      <div className="">
          <>
             <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                <Container>
