@@ -5,7 +5,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import './ServiceDetails.css'
+import './ServiceDetails.css';
 import { Container, Card, Row, Col } from 'react-bootstrap';
 
 const ServicesDetails = () => {
@@ -35,12 +35,10 @@ const ServicesDetails = () => {
       <div className="single-service">
          <Header></Header>
 
-         <div className=" ">
+         <div >
 
 
-
-
-            <Container className="my-5 d-flex  justify-content-center">
+            <Container className=" d-flex  justify-content-center">
                <Row >
                   <Col md={6}>
                      <Card style={{ width: '18rem' }}>

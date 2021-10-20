@@ -13,18 +13,18 @@ const Service = ({ service }) => {
     return (
 
 
-        <Container className=" p-5 service-cards">
+        <Container id="service" className=" p-5 service-cards">
             <Row>
                 <Col md={5}>
-                    <div className="">
-                        <Card className="">
+                    <div>
+                        <Card>
                             <Card.Img variant="top" src={img} />
                         </Card>
                     </div>
                 </Col>
                 <Col md={7}>
                     <Card style={{ width: '18rem' }}>
-                        <Card.Body className="cart-dody">
+                        <Card.Body >
                             <Card.Title>{name}</Card.Title>
                             <Card.Text>{description}
                             </Card.Text>
