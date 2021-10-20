@@ -54,13 +54,13 @@ const Register = () => {
    //HANDLEREGISTRATION
    const handleRegistration = (e) => {
       e.preventDefault();
-      console.log(email, Password);
+
       if (Password.length < 6) {
          setError('password should be at least 6 characters long');
          return;
       }
       if (!/(?=.*[A-Z].*[A-Z])/.test(Password)) {
-         setError('password must contain two upper case');
+         setError('Opps !! password must contain two upper case');
          return;
       }
 
@@ -156,16 +156,34 @@ const Register = () => {
 
             <div className="row mb-3">
                <div className="col-sm-10 offset-sm-2">
+
+                  {error ?
+
+                     <div className="row mb-3 text-success">Congreats ! all Private services is open for you. Visit please... </div>
+                     :
+
+                     <div>
+                        <div className="row mb-3 text-danger">{error}</div>
+                        <div > </div>
+                     </div>
+                  }
                   <div className="form-check">
 
 
                      <input onChange={toggleLogin} className="form-check-input" type="checkbox" id="gridCheck1" />
+
+
+
                      <div className="d-flex ">
                         <label className="form-check-label  mx-4" htmlFor="gridCheck1">
                            Already Registered?
                         </label>
+
                         <button type="submit" className="btn btn-primary">{isLogin ? 'Login' : 'Register'}</button>
-                     </div><br /><br />
+                     </div>
+
+                     <br /><br />
+
                      <div className="d-flex justify-content-center ">
 
                         <button onClick={handleResetPassword} type="button" className="btn btn-secondary btn-sm">Reset Password</button>

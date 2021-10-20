@@ -25,11 +25,10 @@ const Header = () => {
                      <Nav.Link as={Link} to="/doctor">Doctors</Nav.Link>
                      <Nav.Link as={Link} to="/about">About us</Nav.Link>
 
-                     {/* <Nav.Link as={HashLink} to="/login">login</Nav.Link> */}
 
                      {user?.email ?
-                        <Navbar.Text>
-                           Logged in as: <a href="#login">{user?.displayName}</a>
+                        <Navbar.Text className="mx-2">
+                           Logged in success  <a href="#login">{user?.displayName}</a>
                         </Navbar.Text> :
                         <Navbar.Text>
                         </Navbar.Text>

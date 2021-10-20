@@ -19,7 +19,7 @@ const Service = ({ service }) => {
             <div className="d-flex justify-content-center">
                 <Link to={`/home/${id}`}>
                     <button className="btn btn-warning">
-                        <FontAwesomeIcon icon={faPhone} /> Contact with a {name.toLowerCase()} units</button>
+                        <FontAwesomeIcon icon={faPhone} /> Contact with {name.toLowerCase()} units</button>
                 </Link>
             </div>
             {
