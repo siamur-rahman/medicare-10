@@ -2,13 +2,11 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   /* position: relative;
-   background-color: #4b17b5;
-   background-image: url(../../../BANNER.jpg);
-   background-size: cover;
-   margin-bottom: 10px; */
+  
   
 }
+
+
 @media only screen and (max-width:688px) {
    .reg-input{
 

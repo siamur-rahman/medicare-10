@@ -40,13 +40,13 @@ const Register = () => {
 
    //Handle email Change
    const handleEmailChange = e => {
-      // console.log(e.target.value);
+
       setEmail(e.target.value);
    }
 
    //Handle password Change
    const handlePasswordChange = e => {
-      // console.log(e.target.value);
+
       setPassword(e.target.value);
 
    }
@@ -91,7 +91,7 @@ const Register = () => {
                email: email,
                photo: photoURL
             };
-            // console.log(logInUser);
+
             setUser(logInUser);
             setError('');
             varifyEmail();

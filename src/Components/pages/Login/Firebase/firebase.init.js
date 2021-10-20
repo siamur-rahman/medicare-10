@@ -6,5 +6,5 @@ const inializeAuthentication = () => {
    initializeApp(firebaseConfig);
 }
 
-// const app = initializeApp(firebaseConfig);
+
 export default inializeAuthentication;

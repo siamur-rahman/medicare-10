@@ -19,7 +19,7 @@ const ServicesDetails = () => {
    useEffect(() => {
       fetch('/serviceDetails.json')
          .then(res => res.json())
-         // .then(data => console.log(data))
+
          .then(data => setServices(data))
    }, [])
 
@@ -27,7 +27,7 @@ const ServicesDetails = () => {
       const foundService = services.find(service =>
          service.id === id)
       setSingleService(foundService);
-      // console.log(foundService);
+
 
    }, [services])
 
