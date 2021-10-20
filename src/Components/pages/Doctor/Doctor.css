@@ -1,0 +1,17 @@
+
+
+.doctor-card{
+   background-color: rgba(168, 190, 168, 0.419);
+   margin: 5px;
+   padding: 15px;
+   border-radius: 35px;
+}
+.doctor-card:hover{
+   background-color: rgba(12, 90, 12, 0.419);
+   
+}
+
+.button{
+   background-color: rgb(150, 71, 15);
+   color: white;
+}

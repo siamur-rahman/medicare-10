@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-
+import './Doctors.css';
 
 
 import doc1 from '../../../doctors/doc-1.jpg';
@@ -36,10 +36,10 @@ const experts = [
 
 const Doctors = () => {
    return (
-      <div id="doctor" className="bg-secondary">
+      <div id="doctor" className="doctor">
          <Header></Header>
-         <div className="container">
-            <h2 className="text-primary mt-5">Special Doctors</h2>
+         <div className="container mb-5">
+            <h2 className="text-primary m-3">Specialist</h2>
             <div className="row">
                {
                   experts.map(expert => <Doctor

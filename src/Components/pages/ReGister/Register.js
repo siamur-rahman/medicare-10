@@ -19,7 +19,7 @@ inializeAuthentication();
 const Register = () => {
    const { signInUsingGoogle } = useFirebase();
    const [name, setName] = useState('');
-
+   const [user, setUser] = useState({});
    const [email, setEmail] = useState('');
    const [Password, setPassword] = useState('');
    const [error, setError] = useState('');
@@ -91,8 +91,8 @@ const Register = () => {
                email: email,
                photo: photoURL
             };
-            console.log(logInUser);
-            // setUser(logInUser);
+            // console.log(logInUser);
+            setUser(logInUser);
             setError('');
             varifyEmail();
             setUserName();
@@ -157,7 +157,7 @@ const Register = () => {
             <div className="row mb-3">
                <div className="col-sm-10 offset-sm-2">
 
-                  {error ?
+                  {!user ?
 
                      <div className="row mb-3 text-success">Congreats ! all Private services is open for you. Visit please... </div>
                      :

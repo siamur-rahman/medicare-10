@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,7 +7,6 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './ServiceDetails.css'
 import { Container, Card, Row, Col } from 'react-bootstrap';
-// import Doc from '../../../404.jpg';
 
 const ServicesDetails = () => {
 
@@ -28,12 +27,12 @@ const ServicesDetails = () => {
       const foundService = services.find(service =>
          service.id === id)
       setSingleService(foundService);
-      console.log(foundService);
+      // console.log(foundService);
 
    }, [services])
 
    return (
-      <div className="bg-secondary">
+      <div className="single-service">
          <Header></Header>
 
          <div className=" ">
@@ -48,9 +47,11 @@ const ServicesDetails = () => {
                   <Col md={6}>
                      <Card style={{ width: '18rem' }}>
 
-                        <Card>
-                           <Card.Img variant="top" src={singleService?.img} />
-                        </Card>
+                        <div className="d-flex justofy-content-center">
+                           <Card className="d-flex justofy-content-center bg-danger ">
+                              <Card.Img variant="top" src={singleService?.img} />
+                           </Card>
+                        </div>
 
                         <Card.Body className="">
                            <Card.Title>{singleService?.name}</Card.Title>
