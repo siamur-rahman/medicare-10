@@ -9,7 +9,6 @@ import AuthProvider from "./Components/contexts/AuthProvider";
 import About from "./Components/pages/About/About";
 import Doctors from "./Components/pages/Doctors/Doctors";
 import Error from "./Components/pages/Error/Error";
-
 import Home from "./Components/pages/Home/Home";
 import Login from "./Components/pages/Login/Login";
 import PrivateRoute from "./Components/pages/PrivateRoute/PrivateRoute";

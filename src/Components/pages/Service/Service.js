@@ -3,16 +3,12 @@ import { Link } from 'react-router-dom';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Service.css';
-
 import { Container, Card, Row, Col } from 'react-bootstrap';
 
+
 const Service = ({ service }) => {
-
     const { id, name, description, img } = service;
-
     return (
-
-
         <Container id="service" className=" p-5 service-cards">
             <Row>
                 <Col md={5}>
@@ -28,7 +24,6 @@ const Service = ({ service }) => {
                             <Card.Title>{name}</Card.Title>
                             <Card.Text>{description}
                             </Card.Text>
-
                         </Card.Body>
                     </Card>
                 </Col>
@@ -40,10 +35,6 @@ const Service = ({ service }) => {
                 </div>
             </Link>
         </Container>
-
-
-
-
     );
 };
 

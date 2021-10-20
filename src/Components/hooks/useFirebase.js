@@ -11,22 +11,22 @@ const useFirebase = () => {
    const [isLoading, setIsLoading] = useState(true);
 
    const auth = getAuth();
-
+   const googleProvider = new GoogleAuthProvider();
    const signInUsingGoogle = () => {
       setIsLoading(true);
-      const googleProvider = new GoogleAuthProvider();
 
-      signInWithPopup(auth, googleProvider)
-         .then(result => {
-            const { displayName, email, photoURL } = result.user;
-            const logInUser = {
-               name: displayName,
-               email: email,
-               photo: photoURL
-            };
-            setUser(logInUser);
-         })
-         .finally(() => setIsLoading(false));
+
+      return signInWithPopup(auth, googleProvider)//ei line e shudhu return bad
+      // .then(result => {
+      //    const { displayName, email, photoURL } = result.user;
+      //    const logInUser = {
+      //       name: displayName,
+      //       email: email,
+      //       photo: photoURL
+      //    };
+      //    setUser(logInUser);
+      // })
+      // .finally(() => setIsLoading(false));
    }
 
    // observe user state change

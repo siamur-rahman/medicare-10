@@ -1,4 +1,4 @@
-// console.log(process.env);
+
 const firebaseConfig = {
    apiKey: "AIzaSyANnsOj0Rh9SUrVxDydMlIrSL0STVT78Kw",
    authDomain: "medi-care-bac8f.firebaseapp.com",

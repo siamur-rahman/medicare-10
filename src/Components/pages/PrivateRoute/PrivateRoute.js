@@ -3,7 +3,6 @@ import { Spinner } from 'react-bootstrap';
 import { Redirect, Route } from 'react-router';
 import useFirebase from '../../hooks/useFirebase';
 
-
 const PrivateRoute = ({ children, ...rest }) => {
    const { user, isLoading } = useFirebase();
    if (isLoading) {
@@ -18,10 +17,8 @@ const PrivateRoute = ({ children, ...rest }) => {
                state: { from: location }
             }}
          ></Redirect>
-
          }
       >
-
       </Route>
    );
 };

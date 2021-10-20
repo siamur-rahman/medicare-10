@@ -1,5 +1,4 @@
 
-
 .service-cards{
     background-color: rgba(216, 191, 216, 0.318);
     /* margin: 5px; */
@@ -12,7 +11,7 @@
 .service{
     background-color: rgba(12, 56, 114, 0.455);
     border-radius:20px ;
-    
+ 
 }
 .service img{
     width: 100%;
@@ -21,15 +20,12 @@
 width: 100%;
 background-color: rgba(70, 131, 180, 0.345);
 }
-
-
 .btn-warn{
     color:black;
     background-color: cornflowerblue;
     border: none;
     border-radius: 5px;
     padding: 4px;
-  
 }
 
 .btn-warn:hover{

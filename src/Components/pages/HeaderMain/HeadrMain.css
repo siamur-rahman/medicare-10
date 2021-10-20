@@ -2,8 +2,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-  
-  
+
 }
 
 
@@ -20,7 +19,6 @@
          }
    
 }
-
 @media only screen and (min-width:689px) and (max-width: 991px){
    .reg-input{
 
