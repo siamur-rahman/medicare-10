@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import useAuth from '../../hooks/useFirebase';
+import useFirebase from '../../hooks/useFirebase';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import inializeAuthentication from './../Login/Firebase/firebase.init';
@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 inializeAuthentication();
 
 const Register = () => {
-   const { signInUsingGoogle } = useAuth();
+   const { signInUsingGoogle } = useFirebase();
    const [name, setName] = useState('');
    const [user, setUser] = useState({});
    const [email, setEmail] = useState('');
