@@ -71,6 +71,7 @@ const Register = () => {
          .then(result => {
             const user = result.user;
             console.log(user);
+            history.push(redirect_uri);
             setError('');
          })
          .catch(error => {
@@ -165,9 +166,10 @@ const Register = () => {
 
                      <br /><br />
 
-                     <div className="d-flex justify-content-center ">
-                        <button onClick={handleResetPassword} type="button" className="btn btn-secondary btn-sm">Reset Password</button>
+                     <div className="text-center">
+
                         <button onClick={googleLogIn} className="btn btn-warning mb-2 mx-5"> Sign In With Google </button>
+                        <button onClick={handleResetPassword} type="button" className="btn btn-secondary btn-sm">Reset Password</button>
                      </div>
                   </div>
                </div>
